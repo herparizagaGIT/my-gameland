@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+$main_background: black;
+$main_font: 'New Rocker', cursive;
+$main_color: white;
+
+%DEFAULT_CONTAINER {
+    background-color: $main_background;
+    text-align: center;
+    height: calc(100vh - 126px);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: $main_background;
+    color: red;
+    text-align: center;
+    font-family: $main_font;
+  }
+
+nav {
+    background-color: $main_background;
+    ul {
+        margin: 0;
+        padding: 20px 0 0 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        li {
+            display: inline-block;
+            a {
+                color: $main_color;
+                text-decoration: none;
+                font-family: $main_font;
+                font-size: 2.5em;
+            }
+        }
+    }
+}
+
+.selected {
+    cursor: pointer;
+}
+
+main {
+    @extend %DEFAULT_CONTAINER;
+    color: gold;
+    padding-top: 50px;
+    box-sizing: border-box;
+    h1 {
+        font-size: 2.75em;
+    }
+    p {
+        margin: 20px 20% 0 20%;
+        font-size: 2em;
+    }
+}
+
+#CONTACTO {
+    height: calc(100vh - 126px);
+    background-color: gold;
+    width: 100%;
+    display: flex;
+    #H2 {
+        width: 25%;
+        h2 {
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 2em;
+        }
+    }
+    form {
+        width: 75%;      
+        padding: 0 15%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        button {
+            margin-left: 50px;
+            width: 100px;
+        }
+    }    
+} 
+
+#PRECIOS {
+    @extend %DEFAULT_CONTAINER;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    table {
+        font-size: 2em;
+        color: $main_color;
+        th {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: blue;
+        }
+    }
+}
+
+#GAME {
+    @extend %DEFAULT_CONTAINER;
+}
+
+#GUESS {
+    position: absolute;
+    top: 128px;
+    left: 1100px;
+    background-color: red;
+    color: $main_color;
+    font-family: $main_font;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 5em;
+    width: 100px;
+}
+
+footer {
+    background-color: $main_background;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    small {
+        color: $main_color;
+        font-family: $main_font;
+    }
+}
+
+h1 {
+    margin: 0;
+}
